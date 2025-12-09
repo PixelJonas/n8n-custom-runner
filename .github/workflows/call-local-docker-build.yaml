@@ -40,6 +40,6 @@ jobs:
       ghcr-enable: true
 
       image-names: |
-        ghcr.io/bretfisher/docker-build-workflow
+        ghcr.io/pixeljonas/n8n-custom-runner
 
       platforms: '["linux/amd64"]'
