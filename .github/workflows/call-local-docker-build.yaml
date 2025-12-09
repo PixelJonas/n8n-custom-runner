@@ -42,4 +42,4 @@ jobs:
       image-names: |
         ghcr.io/bretfisher/docker-build-workflow
 
-      platforms: '["linux/amd64", "linux/arm64"]'
+      platforms: '["linux/amd64"]'
