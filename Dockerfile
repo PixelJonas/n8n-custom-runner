@@ -1,12 +1,8 @@
 # sample dockerfile for testing call-docker-build.yaml
-FROM alpine:3.22.2
+FROM FROM n8nio/runners:1.123.3
 
-RUN apk add --no-cache curl
+USER root
+RUN cd /opt/runners/task-runner-javascript && pnpm add moment uuid
+RUN cd /opt/runners/task-runner-python && uv pip install numpy pandas scikit-learn
 
-WORKDIR /test
-
-COPY . .
-
-ENTRYPOINT ["curl"]
-
-CMD ["--help"]
+USER runner
