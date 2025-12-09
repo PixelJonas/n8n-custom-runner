@@ -65,6 +65,6 @@ jobs:
 
       # platforms are *native GitHub Runners by default, so only amd64 and/or arm64 are supported, and must be in JSON syntax.
       # for more platform build options, there's a "QEMU" reusable workflow ption in this repo's .github/workflows folder
-      # platforms: '["linux/amd64", "linux/arm64"]'
+      platforms: '["linux/amd64"]'
 
       # comment-enable: true
