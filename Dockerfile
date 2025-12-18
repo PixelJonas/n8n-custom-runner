@@ -1,4 +1,4 @@
-FROM n8nio/runners:1.123.4
+FROM n8nio/runners:1.123.7
 
 USER root
 # Install Python and required build tools
