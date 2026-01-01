@@ -3,7 +3,7 @@ FROM n8nio/runners:2.1.4
 USER root
 
 # Install Python and required build tools
-RUN apk add --no-cache \
+RUN PATH="${PATH}:/sbin" && apk add --no-cache \
     python3 \
     py3-pip \
     ffmpeg \
@@ -16,7 +16,7 @@ RUN apk add --no-cache \
     musl-dev \
     g++ \
     pkgconfig
-    
+
 
 RUN cd /opt/runners/task-runner-javascript && pnpm add moment uuid axios cheerio node-fetch @qdrant/js-client-rest crypto
 RUN cd /opt/runners/task-runner-python && uv pip install scikit-learn
