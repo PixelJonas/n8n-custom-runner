@@ -3,7 +3,9 @@ FROM n8nio/runners:2.1.4
 USER root
 
 # Install Python and required build tools
-RUN PATH="${PATH}:/sbin" && apk add --no-cache \
+RUN wget https://gitlab.alpinelinux.org/api/v4/projects/5/packages/generic//v2.12.14/x86_64/apk.static
+
+RUN ./apk.static add --no-cache \
     python3 \
     py3-pip \
     ffmpeg \
