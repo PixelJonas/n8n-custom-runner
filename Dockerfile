@@ -21,6 +21,6 @@ RUN ./apk.static add --no-cache \
 
 
 RUN cd /opt/runners/task-runner-javascript && pnpm add moment uuid axios cheerio node-fetch @qdrant/js-client-rest crypto
-RUN cd /opt/runners/task-runner-python && uv pip install scikit-learn
+RUN cd /opt/runners/task-runner-python && uv pip install scikit-learn fastembed
 
 USER runner
